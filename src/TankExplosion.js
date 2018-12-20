@@ -14,6 +14,7 @@ TankExplosion.prototype.getImage = function () {
 };
 
 TankExplosion.prototype.destroyHook = function () {
+  console.log('tank destroyed');
   this._eventManager.fireEvent({'name': TankExplosion.Event.DESTROYED, 'explosion': this});
 };
 
